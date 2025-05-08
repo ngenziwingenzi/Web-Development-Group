@@ -1,0 +1,344 @@
+/* 
+* Responsive Stylesheet
+* Author: Sydwell & Dzel
+* Version: 1.0
+*/
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .hero h1 {
+      font-size: 3.5rem;
+    }
+    
+    .hero h3 {
+      font-size: 1.6rem;
+    }
+  
+    .services-features-grid {
+      gap: 20px;
+    }
+  }
+  
+  /* Medium devices (tablets, less than 992px) */
+  @media (max-width: 991.98px) {
+    .hero h1 {
+      font-size: 3rem;
+    }
+    
+    .hero h3 {
+      font-size: 1.4rem;
+    }
+    
+    .about-content {
+      margin-top: 2rem;
+    }
+    
+    .my-info {
+      grid-template-columns: 1fr;
+    }
+    
+    /* Header responsive styles */
+    .header {
+      background-color: rgba(7, 19, 24, 0.9);
+    }
+    
+    body.light-mode .header {
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+    
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 280px;
+      height: 100vh;
+      background-color: var(--darker-color);
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 80px 20px 30px;
+      transition: all 0.3s ease;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      overflow-y: auto;
+      margin-right: 0;
+    }
+    
+    .nav-menu.active {
+      right: 0;
+    }
+    
+    .nav-item {
+      margin: 10px 0;
+      width: 100%;
+    }
+    
+    .nav-link {
+      display: block;
+      padding: 5px 0;
+      width: 100%;
+    }
+    
+    /* Dropdown menu responsive */
+    .dropdown-menu {
+      position: static;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      display: none;
+      padding: 5px 0;
+    }
+    
+    .dropdown-menu::before {
+      display: none;
+    }
+    
+    .nav-item.dropdown.active .dropdown-menu {
+      display: block;
+    }
+    
+    .dropdown-menu a {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+    
+    .menu-toggle {
+      display: flex;
+      z-index: 1000;
+    }
+    
+    body.light-mode .nav-menu {
+      background-color: white;
+    }
+    
+    body.light-mode .dropdown-menu {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  
+    /* Services Features responsive */
+    .services-features-row {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  
+    .services-features-left {
+      order: 2;
+      padding-right: 0;
+    }
+  
+    .services-features-right {
+      order: 1;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  
+    .features-image {
+      max-height: 500px;
+      object-fit: contain;
+    }
+  }
+  
+  /* Small devices */
+  @media (max-width: 767.98px) {
+    .hero {
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero h3 {
+      font-size: 1.2rem;
+    }
+    
+    .hero-buttons {
+      justify-content: center;
+    }
+    
+    .section-title h2 {
+      font-size: 2rem;
+    }
+    
+    .about-img {
+      margin-bottom: 2rem;
+    }
+    
+    .about-content {
+      text-align: center;
+    }
+    
+    .follow-social {
+      justify-content: center;
+    }
+    
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+    }
+    
+    .footer-copyright {
+      margin-bottom: 1rem;
+    }
+  
+    /* Services Features responsive */
+    .services-features-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .feature-item {
+      padding: 20px;
+    }
+  
+    /* Nav Actions Responsive */
+    .nav-actions {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  
+    .hire-me-btn {
+      display: none;
+    }
+  
+    .search-toggle, 
+    .theme-toggle {
+      width: 35px;
+      height: 35px;
+      margin-left: 8px;
+    }
+    
+    .menu-toggle {
+      margin-left: 8px;
+    }
+  }
+  
+  /* Extra small devices */
+  @media (max-width: 575.98px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 0.9rem;
+    }
+    
+    .btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+    
+    .section-title h2 {
+      font-size: 1.8rem;
+    }
+    
+    .service-item,
+    .portfolio-item {
+      margin-bottom: 1.5rem;
+    }
+    
+    .stats-item .counter {
+      font-size: 2.5rem;
+    }
+    
+    .stats-item h3 {
+      font-size: 1rem;
+    }
+  
+    /* Services Features responsive */
+    .feature-item {
+      padding: 15px;
+    }
+  
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    }
+  
+    .feature-text h4 {
+      font-size: 1rem;
+    }
+  
+    .feature-text p {
+      font-size: 0.85rem;
+    }
+  
+    /* Nav Actions Responsive */
+    .hire-me-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      margin-left: 5px;
+    }
+  
+    .search-toggle, 
+    .theme-toggle,
+    .menu-toggle {
+      width: 32px;
+      height: 32px;
+      margin-left: 5px;
+    }
+    
+    .nav-menu {
+      padding-top: 70px;
+    }
+  }
+  
+  /* Height-based media queries */
+  @media (max-height: 500px) {
+    .hero {
+      height: auto;
+      padding: 120px 0 60px;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .header, 
+    .footer, 
+    .contact-form,
+    #back-to-top {
+      display: none !important;
+    }
+    
+    body {
+      color: #000;
+      background: #fff;
+    }
+    
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .hero, 
+    .about, 
+    .skills, 
+    .services, 
+    .services-features,
+    .portfolio, 
+    .contact {
+      padding: 20px 0;
+      page-break-inside: avoid;
+    }
+    
+    .stats {
+      background: none;
+      color: #000;
+    }
+  }
